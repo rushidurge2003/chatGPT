@@ -21,7 +21,7 @@ export const Home = () => {
         if (chattext === "") {
 
         } else {
-            if (ans != "" && que != "") {
+            if (ans !== "" && que !== "") {
                 preData.unshift({ q: que, a: ans })
                 console.log("Obj R : ", preData)
             }
