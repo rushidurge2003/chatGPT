@@ -101,7 +101,7 @@ export const Home = () => {
                                                             style={{ backgroundColor: "orange", verticalAlign: 'middle', }}
                                                             size="large"
                                                         >
-                                                            ChatGPT
+                                                            Chat
                                                         </Avatar>
                                                     </div>
                                                     <div style={{ marginLeft: 20, width: "100%" }}>
