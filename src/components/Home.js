@@ -82,7 +82,7 @@ export const Home = () => {
                                     preData.map((x) => {
                                         return (
                                             <>
-                                                <div className='d-flex' style={{marginTop:30}}>
+                                                <div className='d-flex' style={{ marginTop: 30 }}>
                                                     <div>
                                                         <Avatar
                                                             style={{ backgroundColor: "green", verticalAlign: 'middle', }}
@@ -119,18 +119,20 @@ export const Home = () => {
                     </div> : ""
             }
 
-            <div className='fixed-bottom d-flex row' style={{ width: "60%", margin: "auto", marginBottom: 30 }}>
-                <div className='col-11'>
-                    <TextArea
-                        value={chattext}
-                        onChange={(e) => { setChatText(e.target.value) }}
-                        placeholder="Message ChatGPT"
-                        autoSize={{ minRows: 2, maxRows: 10 }}
-                        style={{ borderRadius: 20 }}
-                    />
-                </div>
-                <div className='col-1' style={{ display: "flex", justifyContent: "center", alignItems: "end" }}>
-                    <Button type="primary" style={{ backgroundColor: "black" }} shape="round" icon={<ArrowUpOutlined />} size="large" onClick={(e) => { handleSubmit(e) }}></Button>
+            <div className='fixed-bottom d-flex row' style={{ width: "80%", margin: "auto", marginBottom: 30 }}>
+                <div className='row'>
+                    <div className='col-10'>
+                        <TextArea
+                            value={chattext}
+                            onChange={(e) => { setChatText(e.target.value) }}
+                            placeholder="Message ChatGPT"
+                            autoSize={{ minRows: 2, maxRows: 10 }}
+                            style={{ borderRadius: 20 }}
+                        />
+                    </div>
+                    <div className='col-2' style={{ display: "flex", justifyContent: "center", alignItems: "end" }}>
+                        <Button type="primary" style={{ backgroundColor: "black" }} shape="round" icon={<ArrowUpOutlined />} size="large" onClick={(e) => { handleSubmit(e) }}></Button>
+                    </div>
                 </div>
             </div>
         </>
