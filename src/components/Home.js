@@ -41,7 +41,7 @@ export const Home = () => {
     return (
         <>
             <div style={{ margin: 20 }}>
-                <h3 className='text-center'>Chat GPT</h3>
+                <h3 className='text-center'>Chat</h3>
             </div>
 
             {
@@ -101,7 +101,7 @@ export const Home = () => {
                                                             style={{ backgroundColor: "orange", verticalAlign: 'middle', }}
                                                             size="large"
                                                         >
-                                                            Chat
+                                                            ChatGPT
                                                         </Avatar>
                                                     </div>
                                                     <div style={{ marginLeft: 20, width: "100%" }}>
