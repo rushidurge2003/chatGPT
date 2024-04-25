@@ -121,7 +121,7 @@ export const Home = () => {
 
             <div className='fixed-bottom d-flex justify-content-center row' style={{borderRadius: 20 , width: "80%", margin: "auto", marginBottom: 30,backgroundColor:"black",padding:10 }}>
                 <div className='row'>
-                    <div className='col-11'>
+                    <div className='col-10'>
                         <TextArea
                             value={chattext}
                             onChange={(e) => { setChatText(e.target.value) }}
@@ -130,7 +130,7 @@ export const Home = () => {
                             style={{ borderRadius: 20 }}
                         />
                     </div>
-                    <div className='col-1' style={{ display: "flex", justifyContent: "center", alignItems: "end" }}>
+                    <div className='col-2' style={{ display: "flex", justifyContent: "center", alignItems: "end" }}>
                         <Button type="primary" style={{ backgroundColor: "white" }} shape="round" icon={<ArrowUpOutlined style={{color:"black"}} />} size="large" onClick={(e) => { handleSubmit(e) }}></Button>
                     </div>
                 </div>
