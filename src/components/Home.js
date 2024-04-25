@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Loading } from './Loading'
-import { Input, Button, Avatar } from 'antd';
+import { Input, Button, Avatar,message } from 'antd';
 import { ArrowUpOutlined, } from '@ant-design/icons';
 
 const { TextArea } = Input;
@@ -19,7 +19,7 @@ export const Home = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (chattext === "") {
-
+            message.warning("Please enter something...!")
         } else {
             if (ans !== "" && que !== "") {
                 preData.unshift({ q: que, a: ans })
@@ -40,7 +40,7 @@ export const Home = () => {
 
     return (
         <>
-            <div style={{ margin: 20 }}>
+            <div className='fixed-top' style={{ margin: 20 }}>
                 <h3 className='text-center'>Chat GPT</h3>
             </div>
 
@@ -119,9 +119,9 @@ export const Home = () => {
                     </div> : ""
             }
 
-            <div className='fixed-bottom d-flex row' style={{ width: "80%", margin: "auto", marginBottom: 30 }}>
+            <div className='fixed-bottom d-flex justify-content-center row' style={{borderRadius: 20 , width: "80%", margin: "auto", marginBottom: 30,backgroundColor:"black",padding:10 }}>
                 <div className='row'>
-                    <div className='col-10'>
+                    <div className='col-11'>
                         <TextArea
                             value={chattext}
                             onChange={(e) => { setChatText(e.target.value) }}
@@ -130,8 +130,8 @@ export const Home = () => {
                             style={{ borderRadius: 20 }}
                         />
                     </div>
-                    <div className='col-2' style={{ display: "flex", justifyContent: "center", alignItems: "end" }}>
-                        <Button type="primary" style={{ backgroundColor: "black" }} shape="round" icon={<ArrowUpOutlined />} size="large" onClick={(e) => { handleSubmit(e) }}></Button>
+                    <div className='col-1' style={{ display: "flex", justifyContent: "center", alignItems: "end" }}>
+                        <Button type="primary" style={{ backgroundColor: "white" }} shape="round" icon={<ArrowUpOutlined style={{color:"black"}} />} size="large" onClick={(e) => { handleSubmit(e) }}></Button>
                     </div>
                 </div>
             </div>
